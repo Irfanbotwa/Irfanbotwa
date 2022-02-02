@@ -311,6 +311,11 @@ reply('invalid type, please contact the owner bot')
                 alpha.sendMessage(m.chat, { video: { url: result.video_1 }, caption: `⭔ Title : ${result.title}\n⭔ Category : ${result.category}\n⭔ Mimetype : ${result.type}\n⭔ Views : ${result.views_count}\n⭔ Shares : ${result.share_count}\n⭔ Source : ${result.link}\n⭔ Media Url : ${result.video_1}` }, { quoted: m })
             }
             break
+            case ''Bot:
+            reply(Musik)
+                hem = fs.readFileSync('./vn/bot.mp3');
+                alpha.sendMessage(from, hem, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+            break
             case 'quotesanime': case 'quoteanime': {
                 reply(mess.wait)
                 anu = await quotesAnime()
